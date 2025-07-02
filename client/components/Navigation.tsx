@@ -33,17 +33,17 @@ export default function Navigation() {
   return (
     <nav
       className={cn(
-        "fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ease-in-out",
+        "fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ease-in-out w-[95%] sm:w-auto max-w-6xl",
         isScrolled
           ? "backdrop-blur-md bg-white/80 shadow-xl"
           : "bg-white/70 backdrop-blur-sm shadow-lg",
       )}
       style={{
-        borderRadius: "2rem",
+        borderRadius: "1.5rem",
         border: "1px solid rgba(255, 255, 255, 0.3)",
       }}
     >
-      <div className="px-6 py-3">
+      <div className="px-3 sm:px-6 py-2 sm:py-3">
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8">
           {/* Logo */}
@@ -62,13 +62,13 @@ export default function Navigation() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4 xl:space-x-6">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
                 className={cn(
-                  "text-sm font-medium transition-all duration-200 hover:text-primary relative",
+                  "text-sm font-medium transition-all duration-200 hover:text-primary relative whitespace-nowrap",
                   location.pathname === item.href
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground",
@@ -83,41 +83,43 @@ export default function Navigation() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 xl:space-x-3">
             <Button
               onClick={handleCall}
               variant="outline"
               size="sm"
-              className="bg-white/50 hover:bg-secondary/20 border-secondary/30 text-secondary hover:text-secondary-foreground transition-all duration-200"
+              className="bg-white/50 hover:bg-secondary/20 border-secondary/30 text-secondary hover:text-secondary-foreground transition-all duration-200 whitespace-nowrap"
             >
-              <Phone className="w-4 h-4 mr-2" />
-              Call Now
+              <Phone className="w-4 h-4 mr-1 xl:mr-2" />
+              <span className="hidden xl:inline">Call Now</span>
+              <span className="xl:hidden">Call</span>
             </Button>
             <Link to="/shopping">
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-primary to-fresh-600 hover:from-fresh-600 hover:to-primary text-white shadow-md hover:shadow-lg transition-all duration-200"
+                className="bg-gradient-to-r from-primary to-fresh-600 hover:from-fresh-600 hover:to-primary text-white shadow-md hover:shadow-lg transition-all duration-200 whitespace-nowrap"
               >
-                <ShoppingBag className="w-4 h-4 mr-2" />
-                Shop
+                <ShoppingBag className="w-4 h-4 mr-1 xl:mr-2" />
+                <span className="hidden xl:inline">Shop</span>
+                <span className="xl:hidden">Shop</span>
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="flex lg:hidden items-center justify-between w-full">
+        {/* Mobile and Tablet Navigation */}
+        <div className="flex lg:hidden items-center justify-between w-full min-w-0">
           {/* Mobile Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-2 text-lg font-bold text-primary"
+            className="flex items-center space-x-2 text-base sm:text-lg font-bold text-primary min-w-0 flex-shrink"
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc93154d951494f618adbb017db30f7ce?format=webp&width=800"
               alt="Banyan Grocers Logo"
-              className="w-7 h-7 rounded-full object-cover"
+              className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover flex-shrink-0"
             />
-            <span className="bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent truncate">
               Banyan
             </span>
           </Link>
@@ -127,12 +129,12 @@ export default function Navigation() {
             variant="ghost"
             size="sm"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2"
+            className="p-1.5 sm:p-2 flex-shrink-0 ml-2"
           >
             {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             ) : (
-              <Menu className="w-5 h-5" />
+              <Menu className="w-4 h-4 sm:w-5 sm:h-5" />
             )}
           </Button>
         </div>
