@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm';
+---
+
+<Layout title="Contact Us - Banyan Grocers">
+  <Navigation />
+  
+  <div class="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back Button -->
+      <a href="/">
+        <button class="mb-6 py-2 px-4 bg-white/70 backdrop-blur-sm border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to Home
+        </button>
+      </a>
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+          Contact Us
+        </h1>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          We'd love to hear from you! Get in touch with any questions, feedback, or special requests.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-fresh-700 mb-6">
+            Get in Touch
+          </h2>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg rounded-2xl p-6">
+            <div class="flex items-start space-x-4">
+              <div class="p-3 bg-fresh-100 rounded-lg">
+                <svg class="w-6 h-6 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-lg mb-2">Phone</h3>
+                <p class="text-muted-foreground mb-3">+1 607-238-7307</p>
+                <button
+                  onclick="window.location.href='tel:+16072387307'"
+                  class="flex items-center gap-2 bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                  </svg>
+                  Call Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg rounded-2xl p-6">
+            <div class="flex items-start space-x-4">
+              <div class="p-3 bg-warm-100 rounded-lg">
+                <svg class="w-6 h-6 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Address</h3>
+                <p class="text-muted-foreground">
+                  223 Main Street, Rear building<br />
+                  Orton Ave, Binghamton, NY 13905
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg rounded-2xl p-6">
+            <div class="flex items-start space-x-4">
+              <div class="p-3 bg-fresh-100 rounded-lg">
+                <svg class="w-6 h-6 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Store Hours</h3>
+                <div class="text-muted-foreground space-y-1">
+                  <p>Wednesday - Tuesday: 10:30 AM - 9:00 PM</p>
+                  <p class="text-sm italic">Hours may vary on holidays</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg rounded-2xl p-6">
+            <div class="flex items-start space-x-4">
+              <div class="p-3 bg-warm-100 rounded-lg">
+                <svg class="w-6 h-6 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Email</h3>
+                <p class="text-muted-foreground">
+                  info@banyangrocers.com<br />
+                  <span class="text-sm">We typically respond within 24 hours</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <ContactForm client:load />
+        </div>
+      </div>
+
+      <!-- Map Section Placeholder -->
+      <div class="mt-16 bg-white/50 backdrop-blur-sm rounded-2xl p-12 border border-fresh-100 text-center">
+        <svg class="w-16 h-16 text-fresh-400 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        <h2 class="text-2xl font-bold text-fresh-700 mb-4">
+          Find Us on the Map
+        </h2>
+        <p class="text-muted-foreground max-w-md mx-auto mb-6">
+          Interactive map integration coming soon! For now, you can find us at 223 Main Street, Rear building, Orton Ave, Binghamton, NY 13905.
+        </p>
+        <button
+          onclick="window.open('https://maps.google.com/?q=223+Main+Street,+Binghamton,+NY+13905', '_blank')"
+          class="py-2 px-4 bg-white/70 backdrop-blur-sm border border-fresh-200 text-fresh-700 hover:bg-fresh-50 rounded-lg transition-colors flex items-center gap-2 mx-auto"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          </svg>
+          Open in Google Maps
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>

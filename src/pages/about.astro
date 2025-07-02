@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const values = [
+  {
+    title: "Community First",
+    description: "We're proud to serve the Binghamton community with dedication and care.",
+  },
+  {
+    title: "Fresh & Sustainable",
+    description: "Committed to providing the freshest products while supporting sustainable practices.",
+  },
+  {
+    title: "Family Owned",
+    description: "A family business that treats every customer like part of our extended family.",
+  },
+  {
+    title: "Quality Promise",
+    description: "We guarantee the highest quality products at competitive prices.",
+  },
+];
+---
+
+<Layout title="About Us - Banyan Grocers">
+  <Navigation />
+  
+  <div class="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back Button -->
+      <a href="/">
+        <button class="mb-6 py-2 px-4 bg-white/70 backdrop-blur-sm border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Back to Home
+        </button>
+      </a>
+
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+          About Banyan Grocers
+        </h1>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Learn more about our story, values, and commitment to serving the Binghamton community with fresh, quality groceries.
+        </p>
+      </div>
+
+      <!-- Story Section -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <h2 class="text-3xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-6">
+            Our Story
+          </h2>
+          <div class="space-y-4 text-muted-foreground">
+            <p>
+              Banyan Grocers has been a cornerstone of the Binghamton community, providing fresh, quality groceries to families throughout the area. Located at 223 Main Street, we've built our reputation on trust, quality, and exceptional customer service.
+            </p>
+            <p>
+              Our commitment goes beyond just selling groceries. We believe in supporting local farmers, providing organic options, and ensuring that every family has access to fresh, nutritious food at affordable prices.
+            </p>
+            <p>
+              From our carefully curated selection of fresh produce to our extensive international foods section, every product in our store is chosen with our customers' needs and preferences in mind.
+            </p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-fresh-100 to-warm-100 rounded-2xl p-12 text-center">
+          <div class="flex justify-center mb-6">
+            <img 
+              src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F1663f0e58d6a461a8d196d170a0497c3?format=webp&width=800"
+              alt="Banyan Grocers - An Urban Tradition"
+              class="h-32 object-contain"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-fresh-700 mb-4">
+            Serving Binghamton Since Day One
+          </h3>
+          <p class="text-muted-foreground">
+            A trusted name in the community, committed to quality and service.
+          </p>
+        </div>
+      </div>
+
+      <!-- Values Section -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold bg-gradient-to-r from-fresh-600 to-warm-600 bg-clip-text text-transparent mb-4">
+            Our Values
+          </h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            These core values guide everything we do at Banyan Grocers.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value) => (
+            <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-2xl p-6 text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-3 text-foreground">
+                {value.title}
+              </h3>
+              <p class="text-sm text-muted-foreground">
+                {value.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Team Section -->
+      <div class="text-center bg-white/50 backdrop-blur-sm rounded-2xl p-12 border border-fresh-100">
+        <svg class="w-16 h-16 text-fresh-400 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+        </svg>
+        <h2 class="text-2xl font-bold text-fresh-700 mb-4">
+          Meet Our Team
+        </h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto mb-6">
+          Our dedicated team members are here to help you find exactly what you need. We pride ourselves on providing friendly, knowledgeable service to every customer.
+        </p>
+        <a href="/contact">
+          <button class="py-3 px-6 bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            Get in Touch
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
