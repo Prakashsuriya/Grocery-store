@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact Us - Banyan Grocers">
+  <main>
+    <style>
+      @import "../styles/global.css";
+    </style>
+
+    <div class="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-16 sm:pt-20 lg:pt-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Back Button -->
+        <a href="/" class="inline-flex items-center mb-4 sm:mb-6 bg-white/70 backdrop-blur-sm border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md text-sm sm:text-base transition-colors">
+          ← Back to Home
+        </a>
+
+        <!-- Header -->
+        <div class="text-center mb-8 sm:mb-12">
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+            Contact Us
+          </h1>
+          <p class="text-base sm:text-lg text-muted-foreground">
+            We'd love to hear from you! Get in touch with any questions or feedback.
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Store Info -->
+          <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-lg p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-semibold text-foreground mb-6">Store Information</h2>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="p-2 bg-fresh-100 rounded-lg">
+                  📍
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base sm:text-lg mb-1">Address</h3>
+                  <p class="text-sm sm:text-base text-muted-foreground">
+                    223 Main Street, Rear building<br>
+                    Orton Ave, Binghamton, NY 13905
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="p-2 bg-fresh-100 rounded-lg">
+                  📞
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base sm:text-lg mb-1">Phone</h3>
+                  <p class="text-sm sm:text-base text-muted-foreground">
+                    <a href="tel:+16072387307" class="hover:text-fresh-600 transition-colors">
+                      +1 607-238-7307
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <div class="p-2 bg-fresh-100 rounded-lg">
+                  🕒
+                </div>
+                <div>
+                  <h3 class="font-semibold text-base sm:text-lg mb-1">Store Hours</h3>
+                  <p class="text-sm sm:text-base text-muted-foreground">
+                    Wednesday - Tuesday: 10:30 AM - 9:00 PM<br>
+                    <span class="text-xs italic">Hours may vary on holidays</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-lg p-6 sm:p-8">
+            <h2 class="text-xl sm:text-2xl font-semibold text-foreground mb-6">Send us a Message</h2>
+            <form class="space-y-4">
+              <div>
+                <label class="text-sm font-medium text-foreground block mb-2">Name</label>
+                <input 
+                  type="text" 
+                  required
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  placeholder="Your name"
+                >
+              </div>
+              <div>
+                <label class="text-sm font-medium text-foreground block mb-2">Email</label>
+                <input 
+                  type="email" 
+                  required
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  placeholder="your@email.com"
+                >
+              </div>
+              <div>
+                <label class="text-sm font-medium text-foreground block mb-2">Message</label>
+                <textarea 
+                  required
+                  rows="4"
+                  class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+              <button 
+                type="submit"
+                class="w-full bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6 py-3 rounded-lg font-medium"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-lg p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-semibold text-foreground mb-6">Find Us</h2>
+          <div class="w-full h-64 sm:h-80 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.093243140471!2d-75.9353497!3d42.1054738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89daef2791b73061%3A0xe48c26c934550ec4!2sBanyan%20Grocers!5e0!3m2!1sen!2sin!4v1751454848543!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
