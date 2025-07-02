@@ -134,13 +134,13 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-24">
+    <div className="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-16 sm:pt-20 lg:pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link to="/">
           <Button
             variant="outline"
-            className="mb-6 bg-white/70 backdrop-blur-sm"
+            className="mb-4 sm:mb-6 bg-white/70 backdrop-blur-sm text-sm sm:text-base"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -148,18 +148,18 @@ export default function Gallery() {
         </Link>
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
             Photo Gallery
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Take a visual tour of our fresh products and welcoming store
             environment.
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {storeImages.map((image) => (
             <Card
               key={image.id}
@@ -171,24 +171,27 @@ export default function Gallery() {
                     src={image.image}
                     alt={image.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center justify-between mb-2 gap-2">
+                    <span className="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full truncate">
                       {image.category}
                     </span>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1 flex-shrink-0">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-4 h-4 text-yellow-400 fill-current"
+                          className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current"
                         />
                       ))}
                     </div>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{image.title}</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-base sm:text-lg font-semibold mb-2">
+                    {image.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Authentic {image.category.toLowerCase()} available at our
                     store.
                   </p>
