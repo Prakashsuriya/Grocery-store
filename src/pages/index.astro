@@ -1,0 +1,144 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/ui/Logo.tsx";
+import { Card, CardContent } from "../components/ui/card.tsx";
+---
+
+<Layout title="Banyan Grocers - Fresh, Local, Quality Groceries">
+  <main>
+    <!-- Import global styles -->
+    <style>
+      @import "../styles/global.css";
+    </style>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
+      <!-- Animated Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-fresh-50 via-background to-warm-50 animate-gradient-shift bg-[length:200%_200%]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(34,197,94,0.1),transparent_50%),radial-gradient(circle_at_70%_70%,rgba(249,115,22,0.1),transparent_50%)]"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <!-- Left Side - Store Description -->
+          <div class="space-y-6 sm:space-y-8 animate-slide-in">
+            <div class="space-y-4 sm:space-y-6">
+              <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span class="bg-gradient-to-r from-fresh-600 via-fresh-700 to-fresh-800 bg-clip-text text-transparent">
+                  Fresh, Local,
+                </span>
+                <br />
+                <span class="bg-gradient-to-r from-warm-500 to-warm-600 bg-clip-text text-transparent">
+                  Quality Groceries
+                </span>
+              </h1>
+              <p class="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+                Welcome to Banyan Grocers, your neighborhood grocery store in
+                the heart of Binghamton. We're committed to providing fresh,
+                quality produce and groceries that bring families together
+                around the dinner table.
+              </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a href="/shopping" class="flex-1">
+                <button class="w-full bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base px-6 py-3 rounded-lg font-medium">
+                  🛒 Start Shopping
+                </button>
+              </a>
+              <button 
+                onclick="window.location.href='tel:+16072387307'"
+                class="flex-1 bg-white/70 hover:bg-white border border-fresh-200 text-fresh-700 hover:text-fresh-800 transition-all duration-300 text-sm sm:text-base px-6 py-3 rounded-lg font-medium"
+              >
+                📞 Call Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side - Logo -->
+          <div class="flex justify-center lg:justify-end order-first lg:order-last">
+            <div class="relative animate-float">
+              <div class="absolute inset-0 bg-gradient-to-r from-fresh-200 to-warm-200 rounded-full blur-3xl opacity-30 scale-125"></div>
+              <div class="relative z-10 scale-110 sm:scale-125 lg:scale-150">
+                <Logo size="xl" client:load />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-fresh-400 rounded-full flex justify-center">
+          <div class="w-1 h-2 sm:h-3 bg-fresh-400 rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-fresh-50/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+            Why Choose Banyan Grocers?
+          </h2>
+          <p class="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+            We're more than just a grocery store - we're your partners in
+            healthy, delicious living.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Fresh & Organic -->
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-lg p-6 sm:p-8 text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+              🌱
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground">
+              Fresh & Organic
+            </h3>
+            <p class="text-sm sm:text-base text-muted-foreground">Locally sourced produce and organic groceries</p>
+          </div>
+
+          <!-- Quality Guaranteed -->
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-lg p-6 sm:p-8 text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+              🏆
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground">
+              Quality Guaranteed
+            </h3>
+            <p class="text-sm sm:text-base text-muted-foreground">Premium quality products at competitive prices</p>
+          </div>
+
+          <!-- Community Focused -->
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-lg p-6 sm:p-8 text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+              ❤️
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground">
+              Community Focused
+            </h3>
+            <p class="text-sm sm:text-base text-muted-foreground">Serving Binghamton with pride since day one</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Info -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-fresh-50 to-warm-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-6">
+            Visit Our Store
+          </h2>
+          <div class="space-y-4 text-base sm:text-lg text-muted-foreground">
+            <p>📍 223 Main Street, Rear building, Orton Ave, Binghamton, NY 13905</p>
+            <p>📞 +1 607-238-7307</p>
+            <p>🕒 Wednesday - Tuesday: 10:30 AM - 9:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
