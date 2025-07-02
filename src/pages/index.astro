@@ -1,16 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/ui/Logo.tsx";
-import { Card, CardContent } from "../components/ui/card.tsx";
 ---
 
 <Layout title="Banyan Grocers - Fresh, Local, Quality Groceries">
   <main>
-    <!-- Import global styles -->
-    <style>
-      @import "../styles/global.css";
-    </style>
-
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
       <!-- Animated Background -->
@@ -125,7 +119,68 @@ import { Card, CardContent } from "../components/ui/card.tsx";
       </div>
     </section>
 
-    <!-- Store Info -->
+    <!-- Categories Preview -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-warm-600 bg-clip-text text-transparent mb-4">
+            Shop by Category
+          </h2>
+          <p class="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+            From fresh produce to international foods, we have everything you
+            need for your family.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              Fresh Produce
+            </p>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              Organic Groceries
+            </p>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              Pantry Staples
+            </p>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              Dairy
+            </p>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              Bakery
+            </p>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              Meats
+            </p>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
+              International Foods
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/shopping">
+            <button class="bg-gradient-to-r from-warm-500 to-warm-600 hover:from-warm-600 hover:to-warm-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base px-6 py-3 rounded-lg font-medium">
+              🛒 Explore All Products
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Info Section -->
     <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-fresh-50 to-warm-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
