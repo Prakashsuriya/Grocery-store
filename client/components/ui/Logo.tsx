@@ -27,52 +27,34 @@ export default function Logo({
 
   if (variant === "icon") {
     return (
-      <div
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc93154d951494f618adbb017db30f7ce?format=webp&width=800"
+        alt="Banyan Grocers Logo"
         className={cn(
-          "bg-gradient-to-br from-fresh-400 via-fresh-500 to-fresh-600 rounded-full flex items-center justify-center shadow-lg",
+          "rounded-full object-cover shadow-lg",
           iconSizes[size],
           className,
         )}
-      >
-        <span className="text-white font-bold">B</span>
-      </div>
+      />
     );
   }
 
   return (
-    <div className={cn("flex items-center space-x-3", className)}>
-      <div
+    <div className={cn("flex items-center justify-center", className)}>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F1663f0e58d6a461a8d196d170a0497c3?format=webp&width=800"
+        alt="Banyan Grocers - An Urban Tradition"
         className={cn(
-          "bg-gradient-to-br from-fresh-400 via-fresh-500 to-fresh-600 rounded-full flex items-center justify-center shadow-lg",
-          iconSizes[size],
+          "object-contain shadow-lg",
+          size === "sm"
+            ? "h-16"
+            : size === "md"
+              ? "h-24"
+              : size === "lg"
+                ? "h-32"
+                : "h-48",
         )}
-      >
-        <span className="text-white font-bold">B</span>
-      </div>
-      <div className="flex flex-col">
-        <span
-          className={cn(
-            "font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent leading-tight",
-            sizeClasses[size],
-          )}
-        >
-          Banyan
-        </span>
-        <span
-          className={cn(
-            "font-medium text-fresh-600/80 leading-tight",
-            size === "sm"
-              ? "text-xs"
-              : size === "md"
-                ? "text-sm"
-                : size === "lg"
-                  ? "text-lg"
-                  : "text-xl",
-          )}
-        >
-          Grocers
-        </span>
-      </div>
+      />
     </div>
   );
 }

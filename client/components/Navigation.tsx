@@ -51,9 +51,11 @@ export default function Navigation() {
             to="/"
             className="flex items-center space-x-3 text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-fresh-400 to-fresh-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">B</span>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc93154d951494f618adbb017db30f7ce?format=webp&width=800"
+              alt="Banyan Grocers Logo"
+              className="w-8 h-8 rounded-full object-cover"
+            />
             <span className="hidden xl:block bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent">
               Banyan Grocers
             </span>
@@ -110,9 +112,11 @@ export default function Navigation() {
             to="/"
             className="flex items-center space-x-2 text-lg font-bold text-primary"
           >
-            <div className="w-7 h-7 bg-gradient-to-br from-fresh-400 to-fresh-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xs">B</span>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc93154d951494f618adbb017db30f7ce?format=webp&width=800"
+              alt="Banyan Grocers Logo"
+              className="w-7 h-7 rounded-full object-cover"
+            />
             <span className="bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent">
               Banyan
             </span>

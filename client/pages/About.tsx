@@ -84,7 +84,13 @@ export default function About() {
             </div>
           </div>
           <div className="bg-gradient-to-br from-fresh-100 to-warm-100 rounded-2xl p-12 text-center">
-            <div className="text-8xl mb-6">🏪</div>
+            <div className="flex justify-center mb-6">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F1663f0e58d6a461a8d196d170a0497c3?format=webp&width=800"
+                alt="Banyan Grocers - An Urban Tradition"
+                className="h-32 object-contain"
+              />
+            </div>
             <h3 className="text-2xl font-bold text-fresh-700 mb-4">
               Serving Binghamton Since Day One
             </h3>

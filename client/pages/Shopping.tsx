@@ -49,7 +49,8 @@ const sampleProducts: Product[] = [
     name: "Organic Bananas",
     price: 2.99,
     category: "Fresh Produce",
-    image: "🍌",
+    image:
+      "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&h=300&fit=crop&crop=center",
     rating: 4.8,
     isOrganic: true,
     description: "Fresh organic bananas, perfect for breakfast or snacks",
@@ -59,7 +60,8 @@ const sampleProducts: Product[] = [
     name: "Local Apples",
     price: 4.99,
     category: "Fresh Produce",
-    image: "🍎",
+    image:
+      "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300&h=300&fit=crop&crop=center",
     rating: 4.9,
     isLocal: true,
     description: "Crispy local apples from nearby orchards",
@@ -69,7 +71,8 @@ const sampleProducts: Product[] = [
     name: "Organic Whole Milk",
     price: 5.49,
     category: "Dairy",
-    image: "🥛",
+    image:
+      "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300&h=300&fit=crop&crop=center",
     rating: 4.7,
     isOrganic: true,
     description: "Fresh organic whole milk from grass-fed cows",
@@ -79,7 +82,8 @@ const sampleProducts: Product[] = [
     name: "Artisan Sourdough",
     price: 6.99,
     category: "Bakery",
-    image: "🍞",
+    image:
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop&crop=center",
     rating: 4.8,
     isLocal: true,
     description: "Handcrafted sourdough bread baked daily",
@@ -89,7 +93,8 @@ const sampleProducts: Product[] = [
     name: "Organic Spinach",
     price: 3.99,
     category: "Organic Groceries",
-    image: "🥬",
+    image:
+      "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&h=300&fit=crop&crop=center",
     rating: 4.6,
     isOrganic: true,
     description: "Fresh organic baby spinach leaves",
@@ -99,7 +104,8 @@ const sampleProducts: Product[] = [
     name: "Quinoa",
     price: 8.99,
     category: "Pantry Staples",
-    image: "🌾",
+    image:
+      "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300&h=300&fit=crop&crop=center",
     rating: 4.5,
     description: "Premium quality quinoa for healthy meals",
   },
@@ -108,7 +114,8 @@ const sampleProducts: Product[] = [
     name: "Free-Range Eggs",
     price: 4.49,
     category: "Dairy",
-    image: "🥚",
+    image:
+      "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&h=300&fit=crop&crop=center",
     rating: 4.9,
     isLocal: true,
     description: "Farm-fresh free-range eggs from local farms",
@@ -118,7 +125,8 @@ const sampleProducts: Product[] = [
     name: "Grass-Fed Beef",
     price: 18.99,
     category: "Meats",
-    image: "🥩",
+    image:
+      "https://images.unsplash.com/photo-1603048588665-791ca8aea617?w=300&h=300&fit=crop&crop=center",
     rating: 4.8,
     isLocal: true,
     description: "Premium grass-fed beef, locally sourced",
@@ -245,8 +253,12 @@ export default function Shopping() {
               className="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden"
             >
               <CardHeader className="pb-4">
-                <div className="text-6xl text-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {product.image}
+                <div className="aspect-square overflow-hidden rounded-lg mb-4">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -366,7 +378,11 @@ export default function Shopping() {
                         key={item.id}
                         className="flex items-center gap-4 p-3 bg-fresh-50 rounded-lg"
                       >
-                        <span className="text-2xl">{item.image}</span>
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-12 h-12 rounded-lg object-cover"
+                        />
                         <div className="flex-1">
                           <h3 className="font-medium">{item.name}</h3>
                           <p className="text-sm text-muted-foreground">
