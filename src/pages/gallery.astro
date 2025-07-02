@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Photo Gallery - Banyan Grocers">
+  <main>
+    <style>
+      @import "../styles/global.css";
+    </style>
+
+    <div class="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-16 sm:pt-20 lg:pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Back Button -->
+        <a href="/" class="inline-flex items-center mb-4 sm:mb-6 bg-white/70 backdrop-blur-sm border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md text-sm sm:text-base transition-colors">
+          ← Back to Home
+        </a>
+
+        <!-- Header -->
+        <div class="text-center mb-8 sm:mb-12">
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+            Photo Gallery
+          </h1>
+          <p class="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+            Take a visual tour of our fresh products and welcoming store environment.
+          </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <!-- Store Images -->
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden rounded-lg">
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fb6441b1e31d74cdd976eca81420c5f3e?format=webp&width=800"
+                alt="International Groceries"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex items-center justify-between mb-2 gap-2">
+                <span class="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                  Pantry Staples
+                </span>
+                <div class="flex items-center gap-1">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <h3 class="text-base sm:text-lg font-semibold mb-2">International Groceries</h3>
+              <p class="text-xs sm:text-sm text-muted-foreground">
+                Authentic pantry staples available at our store.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden rounded-lg">
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fdc2abaf6255144738d797b8553585e26?format=webp&width=800"
+                alt="Rice & Grains"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex items-center justify-between mb-2 gap-2">
+                <span class="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                  Rice & Grains
+                </span>
+                <div class="flex items-center gap-1">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Rice & Grains</h3>
+              <p class="text-xs sm:text-sm text-muted-foreground">
+                Premium rice and grain varieties.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden rounded-lg">
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Feb6bb78dfd46418482ee13c8030b6e2b?format=webp&width=800"
+                alt="Fresh Produce Section"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex items-center justify-between mb-2 gap-2">
+                <span class="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                  Fresh Produce
+                </span>
+                <div class="flex items-center gap-1">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Fresh Produce Section</h3>
+              <p class="text-xs sm:text-sm text-muted-foreground">
+                Fresh, locally sourced produce.
+              </p>
+            </div>
+          </div>
+
+          <!-- More images can be added here -->
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
