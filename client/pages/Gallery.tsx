@@ -4,18 +4,133 @@ import { ArrowLeft, Camera, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Gallery() {
-  const placeholderImages = [
+  const storeImages = [
     {
       id: 1,
-      category: "Fresh Produce",
-      emoji: "🥬",
-      title: "Fresh Vegetables",
+      category: "Pantry Staples",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fb6441b1e31d74cdd976eca81420c5f3e?format=webp&width=800",
+      title: "International Groceries",
     },
-    { id: 2, category: "Fruits", emoji: "🍎", title: "Local Fruits" },
-    { id: 3, category: "Store", emoji: "🏪", title: "Our Store Front" },
-    { id: 4, category: "Bakery", emoji: "🍞", title: "Fresh Baked Goods" },
-    { id: 5, category: "Dairy", emoji: "🥛", title: "Dairy Products" },
-    { id: 6, category: "Meats", emoji: "🥩", title: "Quality Meats" },
+    {
+      id: 2,
+      category: "Pantry Staples",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fdc2abaf6255144738d797b8553585e26?format=webp&width=800",
+      title: "Rice & Grains",
+    },
+    {
+      id: 3,
+      category: "Flour & Grains",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Ffea08b112c1745fe8e1068670b64bf1e?format=webp&width=800",
+      title: "Flour & Specialty Grains",
+    },
+    {
+      id: 4,
+      category: "Fresh Produce",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Feb6bb78dfd46418482ee13c8030b6e2b?format=webp&width=800",
+      title: "Fresh Produce Section",
+    },
+    {
+      id: 5,
+      category: "Rice & Lentils",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fcf62ecce3f3749aa8d69752905d51860?format=webp&width=800",
+      title: "Rice & Lentil Varieties",
+    },
+    {
+      id: 6,
+      category: "Snacks & Nuts",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F18815c2ed68b44a0ba29d5c001ec6497?format=webp&width=800",
+      title: "Premium Snacks & Nuts",
+    },
+    {
+      id: 7,
+      category: "Dairy & Butter",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc7a116f74bbb46de8ba183c15ff35c87?format=webp&width=800",
+      title: "Dairy & Butter Products",
+    },
+    {
+      id: 8,
+      category: "Sweets & Treats",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fbee6ffd21fb4432bb77f8b5b89b121a8?format=webp&width=800",
+      title: "Traditional Sweets",
+    },
+    {
+      id: 9,
+      category: "Ready to Cook",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fbef07944f6194cd98cd24b288d99504f?format=webp&width=800",
+      title: "Ready-to-Cook Items",
+    },
+    {
+      id: 10,
+      category: "Sauces & Condiments",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F0f43d17ca88d429e8b90ab441ada89e5?format=webp&width=800",
+      title: "Sauces & Condiments",
+    },
+    {
+      id: 11,
+      category: "Snacks & Mixes",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F912b54a338fb488193e375de13a46525?format=webp&width=800",
+      title: "Bhel & Hot Mix",
+    },
+    {
+      id: 12,
+      category: "Beverages & Tea",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc60a4f4d44e54c93800f10a2f047ce3d?format=webp&width=800",
+      title: "Tea & Beverages",
+    },
+    {
+      id: 13,
+      category: "Frozen Bread",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fae97c5cd3ff34c3d9a6c688273cf03a1?format=webp&width=800",
+      title: "Frozen Bread & Rotis",
+    },
+    {
+      id: 14,
+      category: "Dairy Products",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F2fb2e9c6297e4c0ab79390cc057aa43b?format=webp&width=800",
+      title: "Yogurt & Dairy",
+    },
+    {
+      id: 15,
+      category: "Frozen Vegetables",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F327a757509624d61a9209f4a04e89c48?format=webp&width=800",
+      title: "Frozen Vegetables",
+    },
+    {
+      id: 16,
+      category: "Frozen Ready Meals",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F9bafde8b9eaf486f8ba03cbf3cca30ad?format=webp&width=800",
+      title: "Frozen Ready Meals",
+    },
+    {
+      id: 17,
+      category: "Frozen Indian Breads",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F89396e67cd7a40b3873ed704df551578?format=webp&width=800",
+      title: "Frozen Parathas & Breads",
+    },
+    {
+      id: 18,
+      category: "Store Exterior",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F789b4695246d4d06b974ea694e8f19a7?format=webp&width=800",
+      title: "Banyan Grocers Store Front",
+    },
   ];
 
   return (
@@ -45,14 +160,18 @@ export default function Gallery() {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {placeholderImages.map((image) => (
+          {storeImages.map((image) => (
             <Card
               key={image.id}
               className="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden"
             >
               <CardContent className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-fresh-100 to-warm-100 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform duration-300">
-                  {image.emoji}
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={image.image}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
@@ -70,8 +189,8 @@ export default function Gallery() {
                   </div>
                   <h3 className="text-lg font-semibold mb-2">{image.title}</h3>
                   <p className="text-sm text-muted-foreground">
-                    High-quality {image.category.toLowerCase()} sourced with
-                    care for our customers.
+                    Authentic {image.category.toLowerCase()} available at our
+                    store.
                   </p>
                 </div>
               </CardContent>

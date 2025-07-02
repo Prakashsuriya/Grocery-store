@@ -175,11 +175,13 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Side - Large Logo */}
+            {/* Right Side - Extra Large Logo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative animate-float">
-                <div className="absolute inset-0 bg-gradient-to-r from-fresh-200 to-warm-200 rounded-full blur-3xl opacity-30 scale-110" />
-                <Logo size="xl" className="relative z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-fresh-200 to-warm-200 rounded-full blur-3xl opacity-30 scale-125" />
+                <div className="relative z-10 scale-150">
+                  <Logo size="xl" />
+                </div>
               </div>
             </div>
           </div>
