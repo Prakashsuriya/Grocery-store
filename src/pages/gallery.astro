@@ -4,10 +4,6 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Photo Gallery - Banyan Grocers">
   <main>
-    <style>
-      @import "../styles/global.css";
-    </style>
-
     <div class="min-h-screen bg-gradient-to-br from-fresh-50/30 via-background to-warm-50/30 pt-16 sm:pt-20 lg:pt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Back Button -->
@@ -103,7 +99,81 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </div>
 
-          <!-- More images can be added here -->
+          <!-- More store images -->
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden rounded-lg">
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fcf62ecce3f3749aa8d69752905d51860?format=webp&width=800"
+                alt="Rice & Lentil Varieties"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex items-center justify-between mb-2 gap-2">
+                <span class="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                  Rice & Lentils
+                </span>
+                <div class="flex items-center gap-1">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Rice & Lentil Varieties</h3>
+              <p class="text-xs sm:text-sm text-muted-foreground">
+                Quality rice and lentils from around the world.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden rounded-lg">
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F18815c2ed68b44a0ba29d5c001ec6497?format=webp&width=800"
+                alt="Premium Snacks & Nuts"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex items-center justify-between mb-2 gap-2">
+                <span class="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                  Snacks & Nuts
+                </span>
+                <div class="flex items-center gap-1">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Premium Snacks & Nuts</h3>
+              <p class="text-xs sm:text-sm text-muted-foreground">
+                Fresh snacks and premium nuts.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 overflow-hidden rounded-lg">
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F789b4695246d4d06b974ea694e8f19a7?format=webp&width=800"
+                alt="Banyan Grocers Store Front"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex items-center justify-between mb-2 gap-2">
+                <span class="text-xs sm:text-sm font-medium text-fresh-600 bg-fresh-100 px-2 py-1 rounded-full">
+                  Store Exterior
+                </span>
+                <div class="flex items-center gap-1">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <h3 class="text-base sm:text-lg font-semibold mb-2">Banyan Grocers Store Front</h3>
+              <p class="text-xs sm:text-sm text-muted-foreground">
+                Welcome to our friendly neighborhood store.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
