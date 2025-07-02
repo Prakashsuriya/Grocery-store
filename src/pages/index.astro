@@ -1,0 +1,277 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Banyan Grocers - Fresh, Local, Quality Groceries">
+  <Navigation />
+  
+  <div class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Animated Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-fresh-50 via-background to-warm-50 animate-gradient-shift bg-[length:200%_200%]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(34,197,94,0.1),transparent_50%),radial-gradient(circle_at_70%_70%,rgba(249,115,22,0.1),transparent_50%)]"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Store Description -->
+          <div class="space-y-8 animate-slide-in">
+            <div class="space-y-6">
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                <span class="bg-gradient-to-r from-fresh-600 via-fresh-700 to-fresh-800 bg-clip-text text-transparent">
+                  Fresh, Local,
+                </span>
+                <br />
+                <span class="bg-gradient-to-r from-warm-500 to-warm-600 bg-clip-text text-transparent">
+                  Quality Groceries
+                </span>
+              </h1>
+              <p class="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                Welcome to Banyan Grocers, your neighborhood grocery store in
+                the heart of Binghamton. We're committed to providing fresh,
+                quality produce and groceries that bring families together
+                around the dinner table.
+              </p>
+            </div>
+
+            <!-- Store Info Cards -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-4 bg-white/60 backdrop-blur-sm border border-fresh-200/50 rounded-2xl hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center space-x-3">
+                  <div class="p-2 bg-fresh-100 rounded-lg">
+                    <svg class="w-5 h-5 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-sm">Location</p>
+                    <p class="text-xs text-muted-foreground">223 Main Street, Binghamton, NY</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 bg-white/60 backdrop-blur-sm border border-warm-200/50 rounded-2xl hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center space-x-3">
+                  <div class="p-2 bg-warm-100 rounded-lg">
+                    <svg class="w-5 h-5 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-sm">Hours</p>
+                    <p class="text-xs text-muted-foreground">Wed-Tue: 10:30 AM - 9 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/shopping" class="flex-1">
+                <button class="w-full py-3 px-6 bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 10a4 4 0 01-8 0"></path>
+                  </svg>
+                  Start Shopping
+                </button>
+              </a>
+              <button class="flex-1 py-3 px-6 bg-white/70 hover:bg-white border border-fresh-200 text-fresh-700 hover:text-fresh-800 rounded-xl transition-all duration-300 flex items-center justify-center gap-2" onclick="window.location.href='tel:+16072387307'">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                </svg>
+                Call Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side - Large Logo -->
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative animate-float">
+              <div class="absolute inset-0 bg-gradient-to-r from-fresh-200 to-warm-200 rounded-full blur-3xl opacity-30 scale-110"></div>
+              <div class="relative z-10">
+                <img 
+                  src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2F1663f0e58d6a461a8d196d170a0497c3?format=webp&width=800"
+                  alt="Banyan Grocers - An Urban Tradition"
+                  class="h-48 object-contain shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-fresh-400 rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-fresh-400 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-b from-background to-fresh-50/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+            Why Choose Banyan Grocers?
+          </h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            We're more than just a grocery store - we're your partners in
+            healthy, delicious living.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-2xl p-8 text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l3.57 15.29c.15.64.69 1.07 1.34 1.07h8.18c.65 0 1.19-.43 1.34-1.07L23 3H5zm0 0l-.71-2H1"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-foreground">Fresh & Organic</h3>
+            <p class="text-muted-foreground">Locally sourced produce and organic groceries</p>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-2xl p-8 text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-foreground">Quality Guaranteed</h3>
+            <p class="text-muted-foreground">Premium quality products at competitive prices</p>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 rounded-2xl p-8 text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-foreground">Community Focused</h3>
+            <p class="text-muted-foreground">Serving Binghamton with pride since day one</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Preview -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-warm-600 bg-clip-text text-transparent mb-4">
+            Shop by Category
+          </h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            From fresh produce to international foods, we have everything you
+            need for your family.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {['Fresh Produce', 'Organic Groceries', 'Local Produce', 'Pantry Staples', 'Dairy', 'Bakery', 'Meats', 'International Foods'].map((category) => (
+            <div class="p-4 rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group">
+              <p class="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors">
+                {category}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <a href="/shopping">
+            <button class="py-3 px-6 bg-gradient-to-r from-warm-500 to-warm-600 hover:from-warm-600 hover:to-warm-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 mx-auto">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+              </svg>
+              Explore All Products
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Info Section -->
+    <section class="py-20 bg-gradient-to-br from-fresh-50 to-warm-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-6">
+              Visit Our Store
+            </h2>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="p-3 bg-fresh-100 rounded-lg">
+                  <svg class="w-6 h-6 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">Address</h3>
+                  <p class="text-muted-foreground">
+                    223 Main Street, Rear building<br />
+                    Orton Ave, Binghamton, NY 13905
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="p-3 bg-warm-100 rounded-lg">
+                  <svg class="w-6 h-6 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">Store Hours</h3>
+                  <p class="text-muted-foreground">
+                    Wednesday - Tuesday: 10:30 AM - 9:00 PM<br />
+                    <span class="text-sm italic">Hours may vary on holidays</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="p-3 bg-fresh-100 rounded-lg">
+                  <svg class="w-6 h-6 text-fresh-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg mb-2">Contact</h3>
+                  <p class="text-muted-foreground">+1 607-238-7307</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <div class="bg-gradient-to-br from-fresh-100 to-warm-100 rounded-xl p-8 text-center">
+              <div class="flex justify-center mb-4">
+                {[...Array(5)].map(() => (
+                  <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                ))}
+              </div>
+              <blockquote class="text-lg italic text-foreground mb-4">
+                "The freshest produce in Binghamton! Banyan Grocers has been
+                our family's go-to store for years. Their local selection is
+                unmatched."
+              </blockquote>
+              <cite class="text-muted-foreground font-medium">
+                - Sarah M., Local Customer
+              </cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+</Layout>
