@@ -46,17 +46,17 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-fresh-50 via-background to-warm-50 animate-gradient-shift bg-[length:200%_200%]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(34,197,94,0.1),transparent_50%),radial-gradient(circle_at_70%_70%,rgba(249,115,22,0.1),transparent_50%)]" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-20">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Store Description */}
-            <div className="space-y-8 animate-slide-in">
-              <div className="space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <div className="space-y-6 sm:space-y-8 animate-slide-in">
+              <div className="space-y-4 sm:space-y-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-fresh-600 via-fresh-700 to-fresh-800 bg-clip-text text-transparent">
                     Fresh, Local,
                   </span>
@@ -65,7 +65,7 @@ export default function Index() {
                     Quality Groceries
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
                   Welcome to Banyan Grocers, your neighborhood grocery store in
                   the heart of Binghamton. We're committed to providing fresh,
                   quality produce and groceries that bring families together
@@ -74,33 +74,33 @@ export default function Index() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link to="/shopping" className="flex-1">
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-fresh-500 to-fresh-600 hover:from-fresh-600 hover:to-fresh-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
                   >
-                    <ShoppingBag className="w-5 h-5 mr-2" />
+                    <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     Start Shopping
                   </Button>
                 </Link>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="flex-1 bg-white/70 hover:bg-white border-fresh-200 text-fresh-700 hover:text-fresh-800 transition-all duration-300"
+                  className="flex-1 bg-white/70 hover:bg-white border-fresh-200 text-fresh-700 hover:text-fresh-800 transition-all duration-300 text-sm sm:text-base"
                   onClick={() => (window.location.href = "tel:+16072387307")}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Call Now
                 </Button>
               </div>
             </div>
 
             {/* Right Side - Extra Large Logo */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-first lg:order-last">
               <div className="relative animate-float">
                 <div className="absolute inset-0 bg-gradient-to-r from-fresh-200 to-warm-200 rounded-full blur-3xl opacity-30 scale-125" />
-                <div className="relative z-10 scale-150">
+                <div className="relative z-10 scale-110 sm:scale-125 lg:scale-150">
                   <Logo size="xl" />
                 </div>
               </div>
@@ -109,9 +109,9 @@ export default function Index() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-fresh-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-fresh-400 rounded-full mt-2 animate-pulse" />
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-fresh-400 rounded-full flex justify-center">
+            <div className="w-1 h-2 sm:h-3 bg-fresh-400 rounded-full mt-1.5 sm:mt-2 animate-pulse" />
           </div>
         </div>
       </section>
