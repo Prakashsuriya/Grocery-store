@@ -193,21 +193,23 @@ export default function Index() {
       </section>
 
       {/* Store Info Section */}
-      <section className="py-20 bg-gradient-to-br from-fresh-50 to-warm-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-fresh-50 to-warm-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-6">
                 Visit Our Store
               </h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-fresh-100 rounded-lg">
-                    <MapPin className="w-6 h-6 text-fresh-600" />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="p-2 sm:p-3 bg-fresh-100 rounded-lg flex-shrink-0">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-fresh-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Address</h3>
-                    <p className="text-muted-foreground">
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">
+                      Address
+                    </h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">
                       223 Main Street, Rear building
                       <br />
                       Orton Ave, Binghamton, NY 13905
@@ -215,50 +217,56 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-warm-100 rounded-lg">
-                    <Clock className="w-6 h-6 text-warm-600" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="p-2 sm:p-3 bg-warm-100 rounded-lg flex-shrink-0">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-warm-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Store Hours</h3>
-                    <p className="text-muted-foreground">
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">
+                      Store Hours
+                    </h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">
                       Wednesday - Tuesday: 10:30 AM - 9:00 PM
                       <br />
-                      <span className="text-sm italic">
+                      <span className="text-xs sm:text-sm italic">
                         Hours may vary on holidays
                       </span>
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-fresh-100 rounded-lg">
-                    <Phone className="w-6 h-6 text-fresh-600" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="p-2 sm:p-3 bg-fresh-100 rounded-lg flex-shrink-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-fresh-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Contact</h3>
-                    <p className="text-muted-foreground">+1 607-238-7307</p>
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">
+                      Contact
+                    </h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">
+                      +1 607-238-7307
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <div className="bg-gradient-to-br from-fresh-100 to-warm-100 rounded-xl p-8 text-center">
-                <div className="flex justify-center mb-4">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-6 sm:p-8">
+              <div className="bg-gradient-to-br from-fresh-100 to-warm-100 rounded-lg sm:rounded-xl p-6 sm:p-8 text-center">
+                <div className="flex justify-center mb-3 sm:mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-6 h-6 text-yellow-400 fill-current"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 fill-current"
                     />
                   ))}
                 </div>
-                <blockquote className="text-lg italic text-foreground mb-4">
+                <blockquote className="text-base sm:text-lg italic text-foreground mb-3 sm:mb-4">
                   "The freshest produce in Binghamton! Banyan Grocers has been
                   our family's go-to store for years. Their local selection is
                   unmatched."
                 </blockquote>
-                <cite className="text-muted-foreground font-medium">
+                <cite className="text-sm sm:text-base text-muted-foreground font-medium">
                   - Sarah M., Local Customer
                 </cite>
               </div>
