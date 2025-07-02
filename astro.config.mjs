@@ -13,6 +13,9 @@ export default defineConfig({
     port: 8080,
     host: true,
   },
+  devToolbar: {
+    enabled: false,
+  },
   build: {
     outDir: "dist",
   },
