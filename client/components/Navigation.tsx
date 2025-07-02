@@ -142,15 +142,15 @@ export default function Navigation() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/30 p-4">
-          <div className="flex flex-col space-y-3">
+        <div className="lg:hidden absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl border border-white/30 p-3 sm:p-4 mx-2 sm:mx-0">
+          <div className="flex flex-col space-y-2 sm:space-y-3">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
-                  "text-sm font-medium py-2 px-3 rounded-lg transition-all duration-200",
+                  "text-sm font-medium py-2 sm:py-2.5 px-3 rounded-lg transition-all duration-200",
                   location.pathname === item.href
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
@@ -159,7 +159,7 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <div className="flex flex-col space-y-2 pt-3 border-t border-border/50">
+            <div className="flex flex-col space-y-2 pt-2 sm:pt-3 border-t border-border/50">
               <Button
                 onClick={() => {
                   handleCall();
@@ -167,18 +167,18 @@ export default function Navigation() {
                 }}
                 variant="outline"
                 size="sm"
-                className="bg-white/50 hover:bg-secondary/20 border-secondary/30 text-secondary justify-start"
+                className="bg-white/50 hover:bg-secondary/20 border-secondary/30 text-secondary justify-start text-xs sm:text-sm"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                Call +1 607-238-7307
+                <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
+                <span className="truncate">Call +1 607-238-7307</span>
               </Button>
-              <Link to="/shopping">
+              <Link to="/shopping" className="w-full">
                 <Button
                   size="sm"
-                  className="w-full bg-gradient-to-r from-primary to-fresh-600 hover:from-fresh-600 hover:to-primary text-white"
+                  className="w-full bg-gradient-to-r from-primary to-fresh-600 hover:from-fresh-600 hover:to-primary text-white text-xs sm:text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <ShoppingBag className="w-4 h-4 mr-2" />
+                  <ShoppingBag className="w-4 h-4 mr-2 flex-shrink-0" />
                   Shop Now
                 </Button>
               </Link>
