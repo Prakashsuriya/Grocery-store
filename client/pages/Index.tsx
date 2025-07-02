@@ -117,32 +117,34 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-fresh-50/30">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-fresh-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent mb-4">
               Why Choose Banyan Grocers?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               We're more than just a grocery store - we're your partners in
               healthy, delicious living.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
                 className="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105"
               >
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-fresh-600" />
+                <CardContent className="p-6 sm:p-8 text-center">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-fresh-100 to-fresh-200 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-fresh-600" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    {feature.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -151,25 +153,25 @@ export default function Index() {
       </section>
 
       {/* Categories Preview */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-warm-600 bg-clip-text text-transparent mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-fresh-600 to-warm-600 bg-clip-text text-transparent mb-4">
               Shop by Category
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               From fresh produce to international foods, we have everything you
               need for your family.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
             {categories.map((category, index) => (
               <div
                 key={index}
-                className="p-4 rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group"
+                className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-fresh-50 to-warm-50 border border-fresh-100 hover:border-fresh-200 transition-all duration-300 hover:scale-105 cursor-pointer group"
               >
-                <p className="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors">
+                <p className="text-center font-medium text-fresh-700 group-hover:text-fresh-800 transition-colors text-sm sm:text-base">
                   {category}
                 </p>
               </div>
@@ -180,9 +182,9 @@ export default function Index() {
             <Link to="/shopping">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-warm-500 to-warm-600 hover:from-warm-600 hover:to-warm-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r from-warm-500 to-warm-600 hover:from-warm-600 hover:to-warm-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
               >
-                <ShoppingBag className="w-5 h-5 mr-2" />
+                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Explore All Products
               </Button>
             </Link>
