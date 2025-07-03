@@ -4,49 +4,55 @@
 <nav class="fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ease-in-out w-[95%] sm:w-auto max-w-6xl backdrop-blur-md bg-white/80 shadow-xl" style="border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.3);">
   <div class="px-3 sm:px-6 py-2 sm:py-3">
     <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center justify-between w-full">
-      <!-- Logo -->
-      <a href="/" class="flex items-center space-x-3 text-xl font-bold text-primary hover:text-primary/80 transition-colors">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc93154d951494f618adbb017db30f7ce?format=webp&width=800"
-          alt="Banyan Grocers Logo"
-          class="w-8 h-8 rounded-full object-cover"
-        />
-        <span class="hidden xl:block bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent">
-          Banyan Grocers
-        </span>
-      </a>
-
-      <!-- Navigation Links -->
-      <div class="flex items-center space-x-6 xl:space-x-8">
-        <a href="/" class="text-sm font-medium transition-all duration-200 hover:text-primary text-primary whitespace-nowrap">
-          Home
-          <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></div>
-        </a>
-        <a href="/gallery" class="text-sm font-medium transition-all duration-200 hover:text-primary text-muted-foreground hover:text-foreground whitespace-nowrap">
-          Gallery
-        </a>
-        <a href="/about" class="text-sm font-medium transition-all duration-200 hover:text-primary text-muted-foreground hover:text-foreground whitespace-nowrap">
-          About
-        </a>
-        <a href="/contact" class="text-sm font-medium transition-all duration-200 hover:text-primary text-muted-foreground hover:text-foreground whitespace-nowrap">
-          Contact
+    <div class="hidden lg:flex items-center w-full">
+      <!-- Logo Section -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center space-x-3 text-xl font-bold text-primary hover:text-primary/80 transition-colors">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F8f78a356a05540998176ea24bafbe59e%2Fc93154d951494f618adbb017db30f7ce?format=webp&width=800"
+            alt="Banyan Grocers Logo"
+            class="w-8 h-8 rounded-full object-cover"
+          />
+          <span class="hidden xl:block bg-gradient-to-r from-fresh-600 to-fresh-700 bg-clip-text text-transparent">
+            Banyan Grocers
+          </span>
         </a>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="flex items-center space-x-2 xl:space-x-3">
-        <button
-          onclick="window.location.href='tel:+16072387307'"
-          class="bg-white/50 hover:bg-secondary/20 border border-secondary/30 text-secondary hover:text-secondary-foreground transition-all duration-200 whitespace-nowrap px-3 py-2 rounded-md text-sm"
-        >
-          📞 <span class="hidden xl:inline">Call Now</span><span class="xl:hidden">Call</span>
-        </button>
-        <a href="/shopping">
-          <button class="bg-gradient-to-r from-primary to-fresh-600 hover:from-fresh-600 hover:to-primary text-white shadow-md hover:shadow-lg transition-all duration-200 whitespace-nowrap px-3 py-2 rounded-md text-sm">
-            🛒 <span class="hidden xl:inline">Shop</span><span class="xl:hidden">Shop</span>
+      <!-- Navigation Links - Centered -->
+      <div class="flex-1 flex justify-center">
+        <div class="flex items-center space-x-6 xl:space-x-8">
+          <a href="/" class="relative text-sm font-medium transition-all duration-200 hover:text-primary text-primary whitespace-nowrap">
+            Home
+            <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></div>
+          </a>
+          <a href="/gallery" class="text-sm font-medium transition-all duration-200 hover:text-primary text-muted-foreground hover:text-foreground whitespace-nowrap">
+            Gallery
+          </a>
+          <a href="/about" class="text-sm font-medium transition-all duration-200 hover:text-primary text-muted-foreground hover:text-foreground whitespace-nowrap">
+            About
+          </a>
+          <a href="/contact" class="text-sm font-medium transition-all duration-200 hover:text-primary text-muted-foreground hover:text-foreground whitespace-nowrap">
+            Contact
+          </a>
+        </div>
+      </div>
+
+      <!-- Action Buttons - Right Aligned -->
+      <div class="flex-shrink-0">
+        <div class="flex items-center space-x-2 xl:space-x-3">
+          <button
+            onclick="window.location.href='tel:+16072387307'"
+            class="bg-white/50 hover:bg-secondary/20 border border-secondary/30 text-secondary hover:text-secondary-foreground transition-all duration-200 whitespace-nowrap px-3 py-2 rounded-md text-sm"
+          >
+            📞 <span class="hidden xl:inline">Call Now</span><span class="xl:hidden">Call</span>
           </button>
-        </a>
+          <a href="/shopping">
+            <button class="bg-gradient-to-r from-primary to-fresh-600 hover:from-fresh-600 hover:to-primary text-white shadow-md hover:shadow-lg transition-all duration-200 whitespace-nowrap px-3 py-2 rounded-md text-sm">
+              🛒 <span class="hidden xl:inline">Shop</span><span class="xl:hidden">Shop</span>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
 
