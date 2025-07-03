@@ -1,4 +1,6 @@
 ---
+import Navigation from "../components/Navigation.astro";
+
 export interface Props {
   title: string;
   description?: string;
@@ -18,6 +20,7 @@ const { title, description = "Fresh, local, quality groceries at Banyan Grocers 
     <title>{title}</title>
   </head>
   <body>
+    <Navigation />
     <slot />
   </body>
 </html>
